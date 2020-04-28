@@ -1,17 +1,21 @@
 package com.example.colorpairer;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
+import com.skydoves.colorpickerview.AlphaTileView;
 import com.skydoves.colorpickerview.ColorPickerView;
+import com.skydoves.colorpickerview.listeners.ColorListener;
 import com.skydoves.colorpickerview.sliders.AlphaSlideBar;
 import com.skydoves.colorpickerview.sliders.BrightnessSlideBar;
 
@@ -28,13 +32,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final ActionBar actionBar = getSupportActionBar();
         final ColorPickerView colorPickerView = findViewById(R.id.colorPickerView);
+        final AlphaTileView alphaTileView = findViewById(R.id.alphaTileView);
 
         AlphaSlideBar alphaSlideBar = findViewById(R.id.alphaSlideBar);
         colorPickerView.attachAlphaSlider(alphaSlideBar);
 
         BrightnessSlideBar brightnessSlideBar = findViewById(R.id.brightnessSlide);
         colorPickerView.attachBrightnessSlider(brightnessSlideBar);
+
+        colorPickerView.setColorListener(new ColorListener() {
+            @Override
+            public void onColorSelected(int color, boolean fromUser) {
+                alphaTileView.setPaintColor(colorPickerView.getColor());
+                alphaTileView.setBackgroundColor(colorPickerView.getColor());
+                actionBar.setBackgroundDrawable(new ColorDrawable(colorPickerView.getColor()));
+            }
+        });
     }
 
     public void imageFromGallery(View view) {

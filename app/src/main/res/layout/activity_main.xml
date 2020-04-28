@@ -11,7 +11,9 @@
         android:id="@+id/colorPickerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
         app:actionMode="last"
         app:alpha_flag="0.8"
         app:alpha_selector="0.8"
@@ -21,6 +23,16 @@
         app:palette="@drawable/palette"
         app:preferenceName="MyColorPicker"
         app:selector="@drawable/wheel" />
+
+    <com.skydoves.colorpickerview.AlphaTileView
+        android:id="@+id/alphaTileView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:tileEvenColor="@android:color/darker_gray"
+        app:tileOddColor="@android:color/white"
+        app:tileSize="20" />
 
     <com.skydoves.colorpickerview.sliders.AlphaSlideBar
         android:id="@+id/alphaSlideBar"
@@ -54,6 +66,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/brightnessSlide" />
-
 
 </LinearLayout>
