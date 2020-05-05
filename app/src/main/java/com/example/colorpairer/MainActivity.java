@@ -1,6 +1,5 @@
 package com.example.colorpairer;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         final ColorPickerView colorPickerView = findViewById(R.id.colorPickerView);
         final AlphaTileView alphaTileView = findViewById(R.id.alphaTileView);
 
@@ -83,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ShowPairedColorActivity.class);
         intent.putExtra("pickedColor",colorPickerView.getColor());
         startActivity(intent);
-        //finish();
     }
 
     public void imageFromGallery(View view) {
