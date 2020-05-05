@@ -27,14 +27,14 @@ public class ShowPairedColorActivity extends AppCompatActivity {
         LinearLayout analogous = findViewById(R.id.analogous);
         LinearLayout triadic = findViewById(R.id.triadic);
         LinearLayout splitComplementary = findViewById(R.id.splitComplementary);
-        LinearLayout monochromatic = findViewById(R.id.tetratic);
+        LinearLayout monochromatic = findViewById(R.id.tetradic);
 
         ColorUtils.colorToHSL(colorARGB, colorHSL);
         setButton(complementary, complementaryGenerator(colorARGB));
         setButton(analogous, analagousGenerator(colorARGB));
         setButton(triadic, triadicGenerator(colorARGB));
         setButton(splitComplementary, splitComplementaryGenerator(colorARGB));
-        setButton(monochromatic, tetraticGenerator(colorARGB));
+        setButton(monochromatic, tetradicGenerator(colorARGB));
     }
 
     private void setButton(LinearLayout layout, final int[] colors) {
@@ -85,10 +85,10 @@ public class ShowPairedColorActivity extends AppCompatActivity {
         return new int[] {splitLesser, colorARGB, splitGreater};
     }
 
-    private int[] tetraticGenerator(int colorARGB) {
-        int tetraticFirst = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 90) % 360, colorHSL[1], colorHSL[2]});
-        int tetraticSecond = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 180) % 360, colorHSL[1], colorHSL[2]});
-        int tetraticThird = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 270) % 360, colorHSL[1], colorHSL[2]});
-        return new int[] {colorARGB, tetraticFirst, tetraticSecond, tetraticThird};
+    private int[] tetradicGenerator(int colorARGB) {
+        int tetradicFirst = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 90) % 360, colorHSL[1], colorHSL[2]});
+        int tetradicSecond = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 180) % 360, colorHSL[1], colorHSL[2]});
+        int tetradicThird = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 270) % 360, colorHSL[1], colorHSL[2]});
+        return new int[] {colorARGB, tetradicFirst, tetradicSecond, tetradicThird};
     }
 }
