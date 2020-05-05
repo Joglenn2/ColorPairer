@@ -91,4 +91,8 @@ public class ShowPairedColorActivity extends AppCompatActivity {
         int tetradicThird = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 270) % 360, colorHSL[1], colorHSL[2]});
         return new int[] {colorARGB, tetradicFirst, tetradicSecond, tetradicThird};
     }
+    public void onComplementaryClick(View view) {
+        Intent intent = new Intent(ShowPairedColorActivity.this, ShowDetailsActivity.class);
+        startActivity(intent);
+    }
 }

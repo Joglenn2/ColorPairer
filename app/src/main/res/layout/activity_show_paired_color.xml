@@ -24,7 +24,8 @@
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Complementary" />
+            android:text="Complementary"
+            android:onClick="onComplementaryClick"/>
 
         <LinearLayout
             android:id="@+id/comlementary"
