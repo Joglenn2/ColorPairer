@@ -31,7 +31,7 @@ public class ShowPairedColorActivity extends AppCompatActivity {
 
         ColorUtils.colorToHSL(colorARGB, colorHSL);
         setButton(complementary, complementaryGenerator(colorARGB));
-        setButton(analogous, analagousGenerator(colorARGB));
+        setButton(analogous, analogousGenerator(colorARGB));
         setButton(triadic, triadicGenerator(colorARGB));
         setButton(splitComplementary, splitComplementaryGenerator(colorARGB));
         setButton(monochromatic, tetradicGenerator(colorARGB));
@@ -67,10 +67,10 @@ public class ShowPairedColorActivity extends AppCompatActivity {
         return new int[] {colorARGB, complementaryARGB};
     }
 
-    private int[] analagousGenerator(int colorARGB) {
-        int analagousGreater = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 30) % 360, colorHSL[1], colorHSL[2]});
-        int analagousLesser = ColorUtils.HSLToColor(new float[] {(colorHSL[0] - 30) % 360, colorHSL[1], colorHSL[2]});
-        return new int[] {analagousLesser, colorARGB, analagousGreater};
+    private int[] analogousGenerator(int colorARGB) {
+        int analogousGreater = ColorUtils.HSLToColor(new float[] {(colorHSL[0] + 30) % 360, colorHSL[1], colorHSL[2]});
+        int analogousLesser = ColorUtils.HSLToColor(new float[] {(colorHSL[0] - 30) % 360, colorHSL[1], colorHSL[2]});
+        return new int[] {analogousLesser, colorARGB, analogousGreater};
     }
 
     private int[] triadicGenerator(int colorARGB) {
