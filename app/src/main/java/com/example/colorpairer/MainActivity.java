@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        final ActionBar actionBar = getSupportActionBar();
+        
         final ColorPickerView colorPickerView = findViewById(R.id.colorPickerView);
         final AlphaTileView alphaTileView = findViewById(R.id.alphaTileView);
 
