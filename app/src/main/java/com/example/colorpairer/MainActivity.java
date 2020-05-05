@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             public void onColorSelected(int color, boolean fromUser) {
                 alphaTileView.setPaintColor(colorPickerView.getColor());
                 alphaTileView.setBackgroundColor(colorPickerView.getColor());
-                actionBar.setBackgroundDrawable(new ColorDrawable(colorPickerView.getColor()));
             }
         });
         final Button trySearching = findViewById(R.id.trySearching);
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ShowPairedColorActivity.class);
         intent.putExtra("pickedColor",colorPickerView.getColor());
         startActivity(intent);
-        finish();
+        //finish();
     }
 
 

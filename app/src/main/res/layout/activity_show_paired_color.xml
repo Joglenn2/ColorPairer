@@ -18,7 +18,7 @@
 
         <Space
             android:layout_width="421dp"
-            android:layout_height="83dp" />
+            android:layout_height="30dp" />
 
         <Button
             android:id="@+id/button2"
@@ -40,110 +40,6 @@
 
             <Button
                 android:id="@+id/color12"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color13"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color14"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color15"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Analogous" />
-
-        <LinearLayout
-            android:id="@+id/analogous"
-            android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/color21"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color22"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color23"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color24"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color25"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Triadic" />
-
-        <LinearLayout
-            android:id="@+id/triadic"
-            android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/color31"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color32"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color33"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color34"
-                android:layout_width="wrap_content"
-                android:layout_height="84dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/color35"
                 android:layout_width="wrap_content"
                 android:layout_height="84dp"
                 android:layout_weight="1" />
@@ -179,18 +75,109 @@
                 android:layout_height="84dp"
                 android:layout_weight="1" />
 
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analogous" />
+
+        <LinearLayout
+            android:id="@+id/analogous"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
             <Button
-                android:id="@+id/color44"
+                android:id="@+id/color21"
                 android:layout_width="wrap_content"
                 android:layout_height="84dp"
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/color45"
+                android:id="@+id/color22"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/color23"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Triadic" />
+
+        <LinearLayout
+            android:id="@+id/triadic"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/color31"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/color32"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/color33"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tetratic" />
+
+        <LinearLayout
+            android:id="@+id/tetratic"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/color50"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/color51"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/color52"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/color53"
                 android:layout_width="wrap_content"
                 android:layout_height="84dp"
                 android:layout_weight="1" />
         </LinearLayout>
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
