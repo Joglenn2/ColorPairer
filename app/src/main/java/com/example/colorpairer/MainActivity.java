@@ -30,7 +30,6 @@ import java.io.InputStream;
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_GALLERY = 1;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
         //finish();
     }
 
-
     public void imageFromGallery(View view) {
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
         photoPickerIntent.setType("image/*");
@@ -110,5 +108,11 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void reset(View view) {
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

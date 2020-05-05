@@ -27,7 +27,7 @@
     <com.skydoves.colorpickerview.AlphaTileView
         android:id="@+id/alphaTileView"
         android:layout_width="match_parent"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         app:tileEvenColor="@android:color/darker_gray"
@@ -56,7 +56,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="198dp"
+        android:layout_height="57dp"
         android:orientation="horizontal">
 
         <Button
@@ -80,12 +80,19 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="0dp"
             android:onClick="imageFromGallery"
-            android:text="Try Searching The Choosen Color"
+            android:text="Generate Color Combinations"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/brightnessSlide" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Reset"
+        android:onClick="reset" />
 
 </LinearLayout>
