@@ -3,15 +3,19 @@ package com.example.colorpairer;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import androidx.appcompat.app.AlertDialog;
 
 import com.skydoves.colorpickerview.AlphaTileView;
 import com.skydoves.colorpickerview.ColorPickerView;
@@ -50,7 +54,42 @@ public class MainActivity extends AppCompatActivity {
                 actionBar.setBackgroundDrawable(new ColorDrawable(colorPickerView.getColor()));
             }
         });
+        final Button trySearching = findViewById(R.id.trySearching);
+        trySearching.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (colorPickerView.getColor() == Color.WHITE) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("Hey!");
+                    builder.setMessage("You have chosen the default color, do you wish to continue?");
+                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startSearching(colorPickerView);
+                        }
+                    });
+                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            return;
+                        }
+                    });
+                    builder.create();
+                    builder.show();
+                } else {
+                    startSearching(colorPickerView);
+                }
+            }
+        });
     }
+
+    private void startSearching(ColorPickerView colorPickerView) {
+        Intent intent = new Intent(MainActivity.this, ShowPairedColorActivity.class);
+        intent.putExtra("pickedColor",colorPickerView.getColor());
+        startActivity(intent);
+        finish();
+    }
+
 
     public void imageFromGallery(View view) {
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
